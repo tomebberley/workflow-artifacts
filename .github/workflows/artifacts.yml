@@ -13,11 +13,11 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Check out the code
-        run: actions/checkout@v2
+        uses: actions/checkout@v2
 
       # Runs a set of commands using the runners shell
       - name: Upload the artifact
-        run: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v2
         with:
           name: ${{ env.ARTIFACT_NAME }}
           path: .
